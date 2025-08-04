@@ -1,128 +1,422 @@
--- Data Entry:-
+-- ======================
+-- DUMMY DATA INSERTS
+-- ======================
 
-insert into pharmacy values(1,'abbott','bangalore',212-9765433,9001002003);
-insert into pharmacy values(2,'allergan','mumbai',222-9838212,9001002004);
-insert into pharmacy values(3,'janssen','bangalore',233-9812113,9001002001);
-insert into pharmacy values(4,'solvay','delhi',235-9862263,9010126387);
-insert into pharmacy values(5,'roche','chennai',248-9818181,9661268268);
-insert into pharmacy values(6,'schwarz','bangalore',253-9866547,9662312312);
-insert into pharmacy values(7,'busk','bangalore',258-9001536,9234234110);
-insert into pharmacy values(8,'novartis','mysore',287-9112543,9235231510);
-insert into pharmacy values(9,'boots','chennai',284-9112541,9878685412);
+-- Admin
+INSERT INTO Admin (Admin_ID, Admin_Name, Admin_Mobile, Admin_Password) VALUES
+(1, 'Rushil', '1894849649', 'strongpass123'),
+(2, 'Mohit', '9876936589', 'securepwd456'),
+(3, 'Nihar', '1398856421', 'mypassword789'),
+(4, 'Amit', '1234567890', 'adminpass001'),
+(5, 'Sara', '2345678901', 'adminpass002'),
+(6, 'Lara', '3456789012', 'adminpass003'),
+(7, 'David', '4567890123', 'adminpass004'),
+(8, 'Maya', '5678901234', 'adminpass005'),
+(9, 'Paul', '6789012345', 'adminpass006'),
+(10, 'Linda', '7890123456', 'adminpass007'),
+(11, 'John', '8901234567', 'adminpass008'),
+(12, 'Emma', '9012345678', 'adminpass009'),
+(13, 'Chris', '9123456789', 'adminpass010'),
+(14, 'Olivia', '9234567890', 'adminpass011'),
+(15, 'Sophia', '9345678901', 'adminpass012'),
+(16, 'James', '9456789012', 'adminpass013'),
+(17, 'Isabella', '9567890123', 'adminpass014'),
+(18, 'Mason', '9678901234', 'adminpass015'),
+(19, 'Ella', '9789012345', 'adminpass016'),
+(20, 'Jacob', '9890123456', 'adminpass017');
 
-insert into doctor values(10,'DPGupta','cardiologists',45,9831312512,'m');
-insert into doctor values(11,'AKSahay','diabetologists',50,9826263264,'m');
-insert into doctor values(12,'LalaAshok','gynaecologists',30,9006001002,'m');
-insert into doctor values(13,'CNMishra','hygienists',32,9875400500,'m');
-insert into doctor values(14,'MKMishra','leprologists',28,9861621312,'m');
-insert into doctor values(15,'vineeta','neurologists',28,9811254112,'f');
-insert into doctor values(16,'Ragini Khanna','neurologists',24,9831054112,'f');
-insert into doctor values(17,'Ajay Solanki','pathologists',32,9811211311,'m');
-insert into doctor values(18,'MD Arif','psychiatrists',31,9006112534,'m');
-insert into doctor values(19,'Salma Ahmad','sexologists',32,9110110221,'f');
+-- Company
+INSERT INTO Company (Company_Name, Company_Address, Company_ContactPerson, Company_Mobile) VALUES
+('Company1', 'Spring Street', 'Alice Brown', '4986153288'),
+('Company2', 'Senator Street', 'Bob Martin', '6238966499'),
+('Company3', 'Sand Hill Street', 'Cathy Lee', '6132644829'),
+('Company4', 'Walnut Street', 'David Smith', '9366339890'),
+('Company5', 'Main Street', 'Evelyn Clark', '3284995852'),
+('Company6', 'Oak Avenue', 'Frank Moore', '4567891234'),
+('Company7', 'Maple Road', 'Grace Kim', '5678912345'),
+('Company8', 'Pine Lane', 'Henry Lee', '6789123456'),
+('Company9', 'Elm Street', 'Isabel Nguyen', '7891234567'),
+('Company10', 'Cedar Drive', 'Jack White', '8912345678'),
+('Company11', 'Birch Boulevard', 'Kate Green', '9123456789'),
+('Company12', 'Aspen Way', 'Liam Scott', '9234567890'),
+('Company13', 'Chestnut Circle', 'Mia Young', '9345678901'),
+('Company14', 'Willow Court', 'Noah King', '9456789012'),
+('Company15', 'Poplar Place', 'Olivia Adams', '9567890123'),
+('Company16', 'Fir Terrace', 'Peter Turner', '9678901234'),
+('Company17', 'Spruce Path', 'Quinn Baker', '9789012345'),
+('Company18', 'Hemlock Alley', 'Rachel Hall', '9890123456'),
+('Company19', 'Cottonwood Way', 'Samuel Evans', '9901234567'),
+('Company20', 'Sycamore Street', 'Tina Perez', '9912345678');
 
+-- Medicine
+INSERT INTO Medicine (Medicine_SlotID, Medicine_Name, Medicine_Detail, Medicine_Price, Company_Name, Medicine_ExpiryDate) VALUES
+(101, 'Paracetamol', 'Pain relief medicine', 5.50, 'Company1', '2026-12-31'),
+(102, 'Amoxicillin', 'Antibiotic medicine', 12.00, 'Company2', '2025-08-30'),
+(103, 'Cetirizine', 'Allergy relief', 7.25, 'Company3', '2027-03-15'),
+(104, 'Ibuprofen', 'Anti-inflammatory', 6.75, 'Company4', '2025-11-10'),
+(105, 'Vitamin C', 'Dietary supplement', 10.00, 'Company5', '2028-01-01'),
+(106, 'Aspirin', 'Blood thinner', 8.50, 'Company6', '2026-04-20'),
+(107, 'Metformin', 'Diabetes medication', 15.00, 'Company7', '2027-09-10'),
+(108, 'Loratadine', 'Allergy relief', 9.25, 'Company8', '2026-05-15'),
+(109, 'Omeprazole', 'Acid reducer', 14.00, 'Company9', '2025-12-31'),
+(110, 'Simvastatin', 'Cholesterol control', 20.00, 'Company10', '2027-07-30'),
+(111, 'Hydrocortisone', 'Steroid cream', 11.50, 'Company11', '2028-10-05'),
+(112, 'Prednisone', 'Anti-inflammatory', 13.00, 'Company12', '2027-06-25'),
+(113, 'Levothyroxine', 'Thyroid hormone', 18.75, 'Company13', '2026-09-15'),
+(114, 'Azithromycin', 'Antibiotic', 17.00, 'Company14', '2025-10-20'),
+(115, 'Clindamycin', 'Antibiotic', 16.50, 'Company15', '2026-03-12'),
+(116, 'Furosemide', 'Diuretic', 12.25, 'Company16', '2027-01-01'),
+(117, 'Gabapentin', 'Neuropathic pain', 22.00, 'Company17', '2027-11-20'),
+(118, 'Melatonin', 'Sleep aid', 9.50, 'Company18', '2028-04-10'),
+(119, 'Doxycycline', 'Antibiotic', 15.75, 'Company19', '2026-02-28'),
+(120, 'Tamsulosin', 'Urinary retention', 21.00, 'Company20', '2027-08-15');
 
-insert into customer values(100,'anshu','m','delhi',9002001004,21,10);
-insert into customer values(101,'iqbal','m','rampur',9821330400,8,11);
-insert into customer values(102,'priya','f','chennai',9840050022,7,12);
-insert into customer values(103,'kaushik','m','patna',9840050023,14,13);
-insert into customer values(104,'nitu','f','bangalore',9840050024,13,14);
-insert into customer values(105,'reshma','f','bangalore',9840050028,22,14);
-insert into customer values(106,'rekha','f','illinois',9840050026,35,15);
-insert into customer values(107,'alisha','f','pune',9840050027,50,16);
-insert into customer values(108,'sonia','f','pehlgaon',9840050021,57,14);
-insert into customer values(109,'vishak sen','m','arwal',9821246112,41,17);
+-- Employee
+INSERT INTO Employee (Employee_ID, Employee_Name, Employee_Mobile, Employee_Salary) VALUES
+(201, 'John Doe', '5551234567', 45000),
+(202, 'Jane Smith', '5559876543', 47000),
+(203, 'Mike Johnson', '5557654321', 50000),
+(204, 'Emily Davis', '5554567890', 48000),
+(205, 'David Wilson', '5552345678', 51000),
+(206, 'Linda Brown', '5553456789', 46000),
+(207, 'James Taylor', '5556789012', 52000),
+(208, 'Patricia Miller', '5557890123', 49000),
+(209, 'Robert Anderson', '5558901234', 47000),
+(210, 'Jennifer Thomas', '5559012345', 53000),
+(211, 'Michael Jackson', '5550123456', 54000),
+(212, 'Mary White', '5551230987', 45000),
+(213, 'William Harris', '5552340987', 55000),
+(214, 'Elizabeth Martin', '5553450987', 56000),
+(215, 'Richard Thompson', '5554560987', 57000),
+(216, 'Barbara Garcia', '5555670987', 58000),
+(217, 'Charles Martinez', '5556780987', 59000),
+(218, 'Susan Robinson', '5557890987', 60000),
+(219, 'Joseph Clark', '5558900987', 61000),
+(220, 'Sarah Rodriguez', '5559010987', 62000);
 
-insert into manufacturer values(1000,'hoivo','hoivo1@gmail',9112113114,'bangalore',1);
-insert into manufacturer values(1001,'medicyl','med2@gmail',9212123134,'mysore',2);
-insert into manufacturer values(1002,'vitade','vit3@gmail',9812121368,'chennai',2);
-insert into manufacturer values(1003,'annuva','ann4@gmail',9001002115,'delhi',3);
-insert into manufacturer values(1004,'mandavus','man5@gmail',9122113114,'hyderabad',1);
-insert into manufacturer values(1005,'inovine','ino5@gmail',9881828112,'bangalore',5);
-insert into manufacturer values(1006,'naturals','nat6@gmail',9111111111,'delhi',6);
-insert into manufacturer values(1007,'versure','ver7@gmail',9865112111,'delhi',7);
-insert into manufacturer values(1008,'bioleap','bio8@gmail',9999511012,'mumbai',8);
-insert into manufacturer values(1009,'borax','bor2@gmail',9006012018,'pune',2);
+-- Customer
+INSERT INTO Customer (Customer_ID, Customer_Name, Customer_Mobile, Bill_BillNo) VALUES
+(1, 'Joseph', '4632984629', 'B12'),
+(2, 'Penny', '9761534978', 'B13'),
+(3, 'Sheldon', '6318496255', 'B14'),
+(4, 'Leonard', '9788881538', 'B15'),
+(5, 'Yash', '5297894548', 'B16'),
+(6, 'Raj', '7984635598', 'B17'),
+(7, 'Rajesh', '6446589213', 'B18'),
+(8, 'Kiren', '8879825415', 'B19'),
+(9, 'Megan', '3658945288', 'B20'),
+(10, 'Diana', '9649955589', 'B21'),
+(11, 'Oliver', '5512345678', 'B22'),
+(12, 'Amelia', '5523456789', 'B23'),
+(13, 'Ethan', '5534567890', 'B24'),
+(14, 'Ava', '5545678901', 'B25'),
+(15, 'Mason', '5556789012', 'B26'),
+(16, 'Sophia', '5567890123', 'B27'),
+(17, 'Logan', '5578901234', 'B28'),
+(18, 'Isabella', '5589012345', 'B29'),
+(19, 'Lucas', '5590123456', 'B30'),
+(20, 'Mia', '5501234567', 'B31');
 
-insert into mediquipment values(12122,'paracetamol','capsule','06-aug-16','20-aug-20',38,1001);
-insert into mediquipment values(12100,'quinapril','tablets','07-aug-16','19-aug-21',56,1003);
-insert into mediquipment values(12115,'zafirlukast','tablets','08-sep-16','17-sep-19',100,1004);
-insert into mediquipment values(12116,'crocin','syrup','09-may-16','16-may-18',210,1005);
-insert into mediquipment values(12117,'injection','operation','18-jun-16','23-apr-23',112,1006);
-insert into mediquipment values(12109,'bandage','cloth','19-sep-16','18-aug-19',112.07,1006);
-insert into mediquipment values(12121,'oxygen mask','operation','25-jul-16','28-dec-17',212.12,1007);
-insert into mediquipment values(12120,'dalacin T','gel','28-oct-16','21-jan-21',303.08,1008);
-insert into mediquipment values(12112,'paramax','tablets','29-apr-16','20-feb-20',308.16,1009);
-insert into mediquipment values(12104,'vinyl','syrup','13-sep-16','13-mar-18',113.18,1003);
+-- Purchase
+INSERT INTO Purchase (Bill_BillNo, Medicine_Price, Medicine_Quantity, Medicine_Name, Company_Name, Bill_Total) VALUES
+('B12', 5.50, 2, 'Paracetamol', 'Company1', 11.00),
+('B13', 12.00, 1, 'Amoxicillin', 'Company2', 12.00),
+('B14', 7.25, 3, 'Cetirizine', 'Company3', 21.75),
+('B15', 6.75, 4, 'Ibuprofen', 'Company4', 27.00),
+('B16', 10.00, 1, 'Vitamin C', 'Company5', 10.00),
+('B17', 8.50, 5, 'Aspirin', 'Company6', 42.50),
+('B18', 15.00, 2, 'Metformin', 'Company7', 30.00),
+('B19', 9.25, 1, 'Loratadine', 'Company8', 9.25),
+('B20', 14.00, 3, 'Omeprazole', 'Company9', 42.00),
+('B21', 20.00, 1, 'Simvastatin', 'Company10', 20.00),
+('B22', 11.50, 2, 'Hydrocortisone', 'Company11', 23.00),
+('B23', 13.00, 3, 'Prednisone', 'Company12', 39.00),
+('B24', 18.75, 1, 'Levothyroxine', 'Company13', 18.75),
+('B25', 17.00, 4, 'Azithromycin', 'Company14', 68.00),
+('B26', 16.50, 2, 'Clindamycin', 'Company15', 33.00),
+('B27', 12.25, 5, 'Furosemide', 'Company16', 61.25),
+('B28', 22.00, 1, 'Gabapentin', 'Company17', 22.00),
+('B29', 9.50, 3, 'Melatonin', 'Company18', 28.50),
+('B30', 15.75, 2, 'Doxycycline', 'Company19', 31.50),
+('B31', 21.00, 1, 'Tamsulosin', 'Company20', 21.00);
 
-insert into employee values('arjun','bangalore','02-aug-14',9110220330,15000,23,'m',1);
-insert into employee values('ankita','mumbai','03-mar-13',9112221312,20000,24,'f',2);
-insert into employee values('ganesh','chennai','03-apr-14',9112222331,24000,25,'m',3);
-insert into employee values('mayur','delhi','02-may-14',9113114118,25000,26,'m',4);
-insert into employee values('mayank','bangalore','05-jun-15',9116100200,26000,25,'m',5);
-insert into employee values('satyam','hyderabad','06-dec-16',9081812812,27000,26,'m',6);
-insert into employee values('abhishek','surat','07-sep-15',9081813813,18000,27,'m',7);
-insert into employee values('daniel','jaipur','08-jul-14',9112134168,19000,21,'m',8);
-insert into employee values('ron','dispur','09-sep-13',9081812113,25000,28,'m',9);
+-- Pharmacy
+INSERT INTO Pharmacy (PhID, Name, City, Fax, Phone) VALUES
+(1, 'City Pharmacy', 'New York', '2125551234', '2125555678'),
+(2, 'HealthPlus', 'Los Angeles', '3105551234', '3105555678'),
+(3, 'WellCare', 'Chicago', '3125551234', '3125555678'),
+(4, 'GoodHealth', 'Houston', '7135551234', '7135555678'),
+(5, 'FamilyMed', 'Phoenix', '6025551234', '6025555678'),
+(6, 'CarePlus', 'Philadelphia', '2155551234', '2155555678'),
+(7, 'MediTrust', 'San Antonio', '2105551234', '2105555678'),
+(8, 'HealthFirst', 'San Diego', '6195551234', '6195555678'),
+(9, 'LifeCare', 'Dallas', '2145551234', '2145555678'),
+(10, 'WellnessPharma', 'San Jose', '4085551234', '4085555678'),
+(11, 'PrimeCare', 'Austin', '5125551234', '5125555678'),
+(12, 'Medix', 'Jacksonville', '9045551234', '9045555678'),
+(13, 'CareWell', 'Fort Worth', '8175551234', '8175555678'),
+(14, 'TotalHealth', 'Columbus', '6145551234', '6145555678'),
+(15, 'QuickMed', 'Charlotte', '7045551234', '7045555678'),
+(16, 'AllHealth', 'San Francisco', '4155551234', '4155555678'),
+(17, 'CarePoint', 'Indianapolis', '3175551234', '3175555678'),
+(18, 'MediHelp', 'Seattle', '2065551234', '2065555678'),
+(19, 'HealthWay', 'Denver', '3035551234', '3035555678'),
+(20, 'PharmaPlus', 'Washington', '2025551234', '2025555678');
 
-insert into supplier values('priyank','bangalore',9812131212,'pri1@gmail',1001,1);
-insert into supplier values('trishal','mumbai',9811210000,'tri2@gmail',1002,2);
-insert into supplier values('raj','pune',9800100211,'raj3@gmail',1003,3);
-insert into supplier values('aryan','chennai',9761610610,'ary4@gmail',1004,4);
-insert into supplier values('vishak','hyderabad',9661252213,'vis5@gmail',1005,5);
-insert into supplier values('shubham','surat',9012101131,'shu6@gmail',1006,6);
-insert into supplier values('rohit','ahmedabad',9002112117,'roh7@gmail',1007,7);
-insert into supplier values('rishabh','bhopal',9811011021,'ris8@gmail',1008,8);
-insert into supplier values('anshuman','jaipur',9811300200,'ans4@gmail',1009,9);
+-- Doctor
+INSERT INTO Doctor (DID, DName, Speciality, Age, Mobile, Gender) VALUES
+(1, 'Dr. Alice Green', 'Cardiology', 45, '5551002000', 'Female'),
+(2, 'Dr. Bob White', 'Neurology', 50, '5551003000', 'Male'),
+(3, 'Dr. Carol Black', 'Pediatrics', 38, '5551004000', 'Female'),
+(4, 'Dr. David Brown', 'Dermatology', 42, '5551005000', 'Male'),
+(5, 'Dr. Emily Davis', 'Oncology', 55, '5551006000', 'Female'),
+(6, 'Dr. Frank Wilson', 'Gastroenterology', 47, '5551007000', 'Male'),
+(7, 'Dr. Grace Lee', 'Orthopedics', 43, '5551008000', 'Female'),
+(8, 'Dr. Henry Martin', 'Psychiatry', 39, '5551009000', 'Male'),
+(9, 'Dr. Irene Clark', 'Endocrinology', 46, '5551010000', 'Female'),
+(10, 'Dr. Jack Lewis', 'Nephrology', 48, '5551011000', 'Male'),
+(11, 'Dr. Karen Walker', 'Ophthalmology', 44, '5551012000', 'Female'),
+(12, 'Dr. Larry Hall', 'Rheumatology', 52, '5551013000', 'Male'),
+(13, 'Dr. Monica Young', 'Urology', 41, '5551014000', 'Female'),
+(14, 'Dr. Nathan Scott', 'Pulmonology', 49, '5551015000', 'Male'),
+(15, 'Dr. Olivia Adams', 'Hematology', 53, '5551016000', 'Female'),
+(16, 'Dr. Peter Baker', 'Allergy', 37, '5551017000', 'Male'),
+(17, 'Dr. Quinn Turner', 'Infectious Disease', 50, '5551018000', 'Female'),
+(18, 'Dr. Rachel Hall', 'Immunology', 42, '5551019000', 'Female'),
+(19, 'Dr. Samuel Evans', 'Neurology', 45, '5551020000', 'Male'),
+(20, 'Dr. Tina Perez', 'Cardiology', 40, '5551021000', 'Female');
 
-insert into hospital values(50,'krishna','kri6@gmail',9771700700,'delhi',1);
-insert into hospital values(51,'jayadeva','jay5@gmail',9772800800,'bangalore',2);
-insert into hospital values(52,'apollo','apo7@gmail',9812900912,'mysore',3);
-insert into hospital values(53,'paras','par8@gmail',9310315315,'delhi',3);
-insert into hospital values(54,'getwello','get9@gmail',9410055000,'chennai',4);
-insert into hospital values(55,'arunodaya','aru8@gmail',9610066100,'mumbai',5);
-insert into hospital values(56,'aastha','aas1@gmail',9780078001,'pune',6);
-insert into hospital values(57,'devagiri','dev7@gmail',9871001002,'surat',7);
-insert into hospital values(58,'shanti','sha8@gmail',9860010081,'bhopal',8);
-insert into hospital values(59,'lakshmi','lak1@gmail',9861001012,'kolkata',9);
+-- Customer_P
+INSERT INTO Customer_P (PID, Name, Sex, City, Phone, Age, DID) VALUES
+(1, 'Emily Clark', 'Female', 'New York', '5551112222', 30, 1),
+(2, 'James Brown', 'Male', 'Los Angeles', '5553334444', 40, 2),
+(3, 'Samantha Green', 'Female', 'Chicago', '5555556666', 28, 3),
+(4, 'Michael Johnson', 'Male', 'Houston', '5557778888', 50, 4),
+(5, 'Laura Martinez', 'Female', 'Phoenix', '5559990000', 35, 5),
+(6, 'Brian Lee', 'Male', 'Philadelphia', '5552223333', 45, 6),
+(7, 'Jessica Kim', 'Female', 'San Antonio', '5554445555', 27, 7),
+(8, 'Kevin White', 'Male', 'San Diego', '5556667777', 38, 8),
+(9, 'Sarah Lopez', 'Female', 'Dallas', '5558889999', 33, 9),
+(10, 'David Clark', 'Male', 'San Jose', '5550001111', 42, 10),
+(11, 'Rachel Adams', 'Female', 'Austin', '5551112223', 29, 11),
+(12, 'Paul Walker', 'Male', 'Jacksonville', '5553334445', 46, 12),
+(13, 'Megan Scott', 'Female', 'Fort Worth', '5555556667', 31, 13),
+(14, 'Eric Baker', 'Male', 'Columbus', '5557778889', 39, 14),
+(15, 'Angela Turner', 'Female', 'Charlotte', '5559990001', 34, 15),
+(16, 'Ryan Evans', 'Male', 'San Francisco', '5552223334', 41, 16),
+(17, 'Stephanie Perez', 'Female', 'Indianapolis', '5554445556', 36, 17),
+(18, 'Mark Hall', 'Male', 'Seattle', '5556667778', 43, 18),
+(19, 'Kimberly Lewis', 'Female', 'Denver', '5558889990', 30, 19),
+(20, 'Jason King', 'Male', 'Washington', '5550001112', 44, 20);
 
-insert into bill values(300,'01-sep-17',20,'anshu',9854575613,'bangalore','quinapril',56,1);
-insert into bill values(301,'02-sep-17',25,'iqbal',8755425417,'bangalore','oxygen mask',212.12,1);
-insert into bill values(302,'03-aug-17',35,'priya',7611413161,'mumbai','crocin',110,1);
-insert into bill values(303,'01-jan-17',45,'kaushik',9153484335,'delhi','injection',112,1);
-insert into bill values(304,'02-feb-17',65,'nitu',7535413431,'chennai','dalacin T',303.08,1);
-insert into bill values(305,'08-feb-17',75,'reshma',8351354134,'mumbai','crocin',110,1);
-insert into bill values(306,'09-feb-17',85,'rekha',9354533131,'mysore','bandage',112.07,1);
-insert into bill values(307,'07-mar-17',95,'alisha',8453431211,'delhi','paramax',308.16,1);
-insert into bill values(308,'08-apr-17',44,'sonia',7153131323,'mysore','vinyl',113.18,1);
-insert into bill values(309,'08-apr-17',26,'sonia',9534351743,'delhi','crocin',110,1);
+-- Manufacturer
+INSERT INTO Manufacturer (CID, Name, Email, Mobile, City, PharID) VALUES
+(1, 'MedSupply Co.', 'contact@medsupply.com', '5552223333', 'New York', 1),
+(2, 'HealthCorp', 'info@healthcorp.com', '5554445555', 'Los Angeles', 2),
+(3, 'PharmaPlus', 'sales@pharmaplus.com', '5556667777', 'Chicago', 3),
+(4, 'WellnessMeds', 'contact@wellnessmeds.com', '5558889999', 'Houston', 4),
+(5, 'CareMeds', 'info@caremeds.com', '5551112222', 'Phoenix', 5),
+(6, 'MediTrust', 'support@meditrust.com', '5553334444', 'Philadelphia', 6),
+(7, 'GlobalPharma', 'sales@globalpharma.com', '5555556666', 'San Antonio', 7),
+(8, 'HealthWay', 'contact@healthway.com', '5557778888', 'San Diego', 8),
+(9, 'LifeCare', 'info@lifecare.com', '5559990000', 'Dallas', 9),
+(10, 'PrimeMeds', 'support@primemeds.com', '5552221111', 'San Jose', 10),
+(11, 'TotalHealth', 'sales@totalhealth.com', '5553332222', 'Austin', 11),
+(12, 'CarePoint', 'contact@carepoint.com', '5554443333', 'Jacksonville', 12),
+(13, 'MediHelp', 'info@medihelp.com', '5555554444', 'Fort Worth', 13),
+(14, 'HealthPlus', 'support@healthplus.com', '5556665555', 'Columbus', 14),
+(15, 'PharmaWorks', 'sales@pharmaworks.com', '5557776666', 'Charlotte', 15),
+(16, 'MediSource', 'contact@medisource.com', '5558887777', 'San Francisco', 16),
+(17, 'Global Supplies', 'info@globalsupplies.com', '5559998888', 'Indianapolis', 17),
+(18, 'CareWell', 'support@carewell.com', '5552229999', 'Seattle', 18),
+(19, 'WellCare', 'sales@wellcare.com', '5553339999', 'Denver', 19),
+(20, 'QuickMed', 'contact@quickmed.com', '5554449999', 'Washington', 20);
 
-insert into works values(1,'01-aug-16','19-mar-19');
-insert into works values(2,'02-aug-16','20-mar-19');
-insert into works values(3,'03-aug-16','21-mar-19');
-insert into works values(4,'04-may-16','22-mar-19');
-insert into works values(5,'05-may-16','23-mar-19');
-insert into works values(6,'06-jun-16','26-oct-19');
-insert into works values(7,'21-jul-16','28-oct-19');
-insert into works values(8,'21-sep-16','29-oct-19');
-insert into works values(9,'22-sep-16','23-mar-19');
+-- MediEquipment
+INSERT INTO MediEquipment (Code, Trade_Name, Product_Type, Mfg_Date, Exp_Date, Price, CID) VALUES
+(1001, 'X-Ray Machine', 'Diagnostic', '2022-01-10', '2027-01-09', 50000.00, 1),
+(1002, 'ECG Monitor', 'Monitoring', '2023-05-15', '2028-05-14', 15000.00, 2),
+(1003, 'Ultrasound Device', 'Imaging', '2021-07-20', '2026-07-19', 35000.00, 3),
+(1004, 'MRI Scanner', 'Imaging', '2020-03-25', '2025-03-24', 120000.00, 4),
+(1005, 'Defibrillator', 'Emergency', '2022-11-11', '2027-11-10', 8000.00, 5),
+(1006, 'Ventilator', 'Respiratory', '2023-01-05', '2028-01-04', 45000.00, 6),
+(1007, 'Syringe Pump', 'Infusion', '2021-09-15', '2026-09-14', 3000.00, 7),
+(1008, 'Pulse Oximeter', 'Monitoring', '2022-05-10', '2027-05-09', 2000.00, 8),
+(1009, 'Anesthesia Machine', 'Surgical', '2020-12-01', '2025-11-30', 60000.00, 9),
+(1010, 'Patient Monitor', 'Monitoring', '2023-04-20', '2028-04-19', 25000.00, 10),
+(1011, 'Surgical Light', 'Surgical', '2021-06-07', '2026-06-06', 12000.00, 11),
+(1012, 'Infusion Pump', 'Infusion', '2022-08-22', '2027-08-21', 4000.00, 12),
+(1013, 'Blood Gas Analyzer', 'Diagnostic', '2020-10-30', '2025-10-29', 30000.00, 13),
+(1014, 'Sterilizer', 'Sterilization', '2021-12-15', '2026-12-14', 7000.00, 14),
+(1015, 'Incubator', 'Neonatal', '2023-02-18', '2028-02-17', 15000.00, 15),
+(1016, 'Autoclave', 'Sterilization', '2022-07-01', '2027-06-30', 9000.00, 16),
+(1017, 'ECG Electrodes', 'Monitoring', '2021-04-10', '2026-04-09', 500.00, 17),
+(1018, 'Oxygen Concentrator', 'Respiratory', '2020-09-20', '2025-09-19', 3500.00, 18),
+(1019, 'Hemodialysis Machine', 'Nephrology', '2022-03-05', '2027-03-04', 40000.00, 19),
+(1020, 'Surgical Table', 'Surgical', '2021-11-25', '2026-11-24', 10000.00, 20);
 
-insert into contract values(1,1000,'01-jan-15','11-sep-19');
-insert into contract values(2,1001,'01-jan-15','21-sep-19');
-insert into contract values(3,1002,'02-jan-15','01-oct-19');
-insert into contract values(4,1003,'03-mar-15','02-oct-19');
-insert into contract values(5,1004,'03-mar-15','03-oct-19');
-insert into contract values(6,1005,'04-apr-15','04-dec-19');
-insert into contract values(7,1006,'05-apr-15','08-dec-20');
-insert into contract values(8,1004,'06-apr-15','09-nov-20');
-insert into contract values(9,1002,'10-jun-15','08-nov-19');
+-- Supplier
+INSERT INTO Supplier (Name, City, Mobile, Email, CID, PharID) VALUES
+('Global Supplies', 'New York', 5556667777, 'global@supplies.com', 1, 1),
+('MediSource', 'Los Angeles', 5558889999, 'contact@medisource.com', 2, 2),
+('HealthFirst', 'Chicago', 5557778888, 'sales@healthfirst.com', 3, 3),
+('CareMeds', 'Houston', 5555556666, 'info@caremeds.com', 4, 4),
+('MedEquip', 'Phoenix', 5554443333, 'support@medequip.com', 5, 5),
+('PharmaLine', 'Philadelphia', 5553332222, 'contact@pharmaline.com', 6, 6),
+('SafeHealth', 'San Antonio', 5552221111, 'sales@safehealth.com', 7, 7),
+('BioMedix', 'San Diego', 5551110000, 'info@biomedix.com', 8, 8),
+('MediHub', 'Dallas', 5550009999, 'support@medihub.com', 9, 9),
+('MedChain', 'San Jose', 5559998888, 'sales@medchain.com', 10, 10),
+('CarePoint', 'Austin', 5558887777, 'info@carepoint.com', 11, 11),
+('MediQuick', 'Jacksonville', 5557776666, 'contact@mediquick.com', 12, 12),
+('PharmaTech', 'Fort Worth', 5556665555, 'support@pharmatech.com', 13, 13),
+('LifeSupply', 'Columbus', 5555554444, 'sales@lifesupply.com', 14, 14),
+('MediTrust', 'Charlotte', 5554443333, 'info@meditrust.com', 15, 15),
+('WellnessSupply', 'San Francisco', 5553332222, 'support@wellnesssupply.com', 16, 16),
+('GlobalMed', 'Indianapolis', 5552221111, 'contact@globalmed.com', 17, 17),
+('HealthWay', 'Seattle', 5551110000, 'info@healthway.com', 18, 18),
+('QuickMed', 'Denver', 5550009999, 'sales@quickmed.com', 19, 19),
+('TotalHealth', 'Washington', 5559998888, 'support@totalhealth.com', 20, 20);
 
-insert into prescribe values('01-sep-17','paracetamol',10,101);
-insert into prescribe values('02-sep-17','crocin',11,102);
-insert into prescribe values('03-sep-17','crocin',12,103);
-insert into prescribe values('01-sep-17','bandage',13,105);
-insert into prescribe values('02-sep-17','oxygen mask',14,106);
-insert into prescribe values('08-sep-17','vinyl',15,107);
-insert into prescribe values('07-sep-17','paramax',16,108);
-insert into prescribe values('21-sep-17','dalacin T',17,109);
-insert into prescribe values('22-sep-17','quinapril',18,104);
+-- Employee_P
+INSERT INTO Employee_P (Name, City, DOJ, Mobile, Salary, Age, Sex, PharID) VALUES
+('Emily Smith', 'New York', '2020-01-15', '5551234567', 55000, 29, 'F', 1),
+('John Doe', 'Los Angeles', '2019-03-20', '5552345678', 60000, 35, 'M', 2),
+('Sarah Johnson', 'Chicago', '2021-06-10', '5553456789', 52000, 26, 'F', 3),
+('Michael Brown', 'Houston', '2018-11-05', '5554567890', 65000, 38, 'M', 4),
+('Jessica Lee', 'Phoenix', '2020-08-12', '5555678901', 58000, 31, 'F', 5),
+('David Wilson', 'Philadelphia', '2017-09-30', '5556789012', 62000, 40, 'M', 6),
+('Ashley Davis', 'San Antonio', '2022-02-01', '5557890123', 54000, 28, 'F', 7),
+('James Martinez', 'San Diego', '2016-04-18', '5558901234', 67000, 42, 'M', 8),
+('Amanda Garcia', 'Dallas', '2023-05-10', '5559012345', 51000, 25, 'F', 9),
+('Robert Miller', 'San Jose', '2015-07-25', '5550123456', 70000, 45, 'M', 10),
+('Emily Thomas', 'Austin', '2020-03-14', '5550987654', 56000, 30, 'F', 11),
+('William Taylor', 'Jacksonville', '2019-12-22', '5551122334', 63000, 37, 'M', 12),
+('Olivia Moore', 'Fort Worth', '2021-01-09', '5552233445', 52000, 27, 'F', 13),
+('Daniel Anderson', 'Columbus', '2018-06-11', '5553344556', 66000, 39, 'M', 14),
+('Sophia Jackson', 'Charlotte', '2017-08-17', '5554455667', 59000, 32, 'F', 15),
+('Matthew White', 'San Francisco', '2022-04-05', '5555566778', 64000, 36, 'M', 16),
+('Isabella Harris', 'Indianapolis', '2016-10-21', '5556677889', 50000, 24, 'F', 17),
+('Joseph Martin', 'Seattle', '2023-07-19', '5557788990', 71000, 46, 'M', 18),
+('Mia Thompson', 'Denver', '2020-11-30', '5558899001', 53000, 29, 'F', 19),
+('Christopher Garcia', 'Washington', '2019-05-15', '5559900112', 68000, 41, 'M', 20);
+
+-- Hospital
+INSERT INTO Hospital (Hospital_ID, Hospital_Name, Location, Phone, Email)
+VALUES
+(1, 'CityCare Hospital', 'New York', 2121112222, 'info@citycare.com'),
+(2, 'HealthPlus Center', 'Los Angeles', 3102223333, 'contact@healthplus.com'),
+(3, 'MetroHealth Clinic', 'Chicago', 7733334444, 'admin@metrohealth.com'),
+(4, 'Wellness Hospital', 'Houston', 7134445555, 'support@wellness.com'),
+(5, 'Sunrise Medical', 'Phoenix', 6025556666, 'info@sunrise.com'),
+(6, 'Trinity Care', 'Philadelphia', 2156667777, 'contact@trinity.com'),
+(7, 'Evergreen Hospital', 'San Antonio', 2107778888, 'admin@evergreen.com'),
+(8, 'Hope Clinic', 'San Diego', 6198889999, 'info@hopeclinic.com'),
+(9, 'Cure Hospital', 'Dallas', 2149990000, 'support@cure.com'),
+(10, 'HealWell Center', 'San Jose', 4080001111, 'contact@healwell.com'),
+(11, 'NorthStar Medical', 'Austin', 5121112222, 'info@northstar.com'),
+(12, 'Bright Health', 'Jacksonville', 9042223333, 'admin@brighthealth.com'),
+(13, 'Lifeline Hospital', 'Fort Worth', 8173334444, 'contact@lifeline.com'),
+(14, 'Pioneer Hospital', 'Columbus', 6144445555, 'info@pioneer.com'),
+(15, 'Nova Care', 'Charlotte', 9805556666, 'support@novacare.com'),
+(16, 'MedStar Clinic', 'San Francisco', 6286667777, 'admin@medstar.com'),
+(17, 'Unity Hospital', 'Indianapolis', 3177778888, 'contact@unity.com'),
+(18, 'Pathway Medical', 'Seattle', 2068889999, 'info@pathway.com'),
+(19, 'NewHope Hospital', 'Denver', 7209990000, 'support@newhope.com'),
+(20, 'VitalCare Center', 'Washington', 2020001111, 'admin@vitalcare.com');
+
+-- Bill
+INSERT INTO Bill (Bill_ID, Customer_ID, Total_Amount, Payment_Mode, Bill_Date)
+VALUES
+(1, 1, 150.75, 'Credit Card', '2024-01-10'),
+(2, 2, 200.00, 'Cash', '2024-01-12'),
+(3, 3, 340.50, 'Online', '2024-01-14'),
+(4, 4, 500.00, 'Credit Card', '2024-01-15'),
+(5, 5, 120.20, 'Debit Card', '2024-01-18'),
+(6, 6, 75.00, 'Cash', '2024-01-20'),
+(7, 7, 230.40, 'Credit Card', '2024-01-21'),
+(8, 8, 180.30, 'Online', '2024-01-23'),
+(9, 9, 199.99, 'Cash', '2024-01-24'),
+(10, 10, 210.00, 'Credit Card', '2024-01-25'),
+(11, 11, 90.00, 'Cash', '2024-01-26'),
+(12, 12, 300.00, 'Online', '2024-01-27'),
+(13, 13, 60.50, 'Cash', '2024-01-28'),
+(14, 14, 330.00, 'Credit Card', '2024-01-29'),
+(15, 15, 245.60, 'Debit Card', '2024-01-30'),
+(16, 16, 120.99, 'Cash', '2024-01-31'),
+(17, 17, 500.00, 'Online', '2024-02-01'),
+(18, 18, 95.00, 'Credit Card', '2024-02-02'),
+(19, 19, 310.10, 'Cash', '2024-02-03'),
+(20, 20, 410.00, 'Debit Card', '2024-02-04');
+
+-- Works
+INSERT INTO Works (Employee_ID, Pharmacy_ID, Role)
+VALUES
+(1, 1, 'Pharmacist'),
+(2, 2, 'Manager'),
+(3, 3, 'Cashier'),
+(4, 4, 'Technician'),
+(5, 5, 'Pharmacist'),
+(6, 6, 'Cashier'),
+(7, 7, 'Manager'),
+(8, 8, 'Technician'),
+(9, 9, 'Pharmacist'),
+(10, 10, 'Manager'),
+(11, 11, 'Technician'),
+(12, 12, 'Pharmacist'),
+(13, 13, 'Cashier'),
+(14, 14, 'Manager'),
+(15, 15, 'Technician'),
+(16, 16, 'Pharmacist'),
+(17, 17, 'Cashier'),
+(18, 18, 'Manager'),
+(19, 19, 'Technician'),
+(20, 20, 'Pharmacist');
+
+-- Contract
+INSERT INTO Contract (Contract_ID, Supplier_ID, Hospital_ID, Start_Date, End_Date)
+VALUES
+(1, 1, 1, '2023-01-01', '2024-01-01'),
+(2, 2, 2, '2023-02-01', '2024-02-01'),
+(3, 3, 3, '2023-03-01', '2024-03-01'),
+(4, 4, 4, '2023-04-01', '2024-04-01'),
+(5, 5, 5, '2023-05-01', '2024-05-01'),
+(6, 6, 6, '2023-06-01', '2024-06-01'),
+(7, 7, 7, '2023-07-01', '2024-07-01'),
+(8, 8, 8, '2023-08-01', '2024-08-01'),
+(9, 9, 9, '2023-09-01', '2024-09-01'),
+(10, 10, 10, '2023-10-01', '2024-10-01'),
+(11, 11, 11, '2023-11-01', '2024-11-01'),
+(12, 12, 12, '2023-12-01', '2024-12-01'),
+(13, 13, 13, '2024-01-01', '2025-01-01'),
+(14, 14, 14, '2024-02-01', '2025-02-01'),
+(15, 15, 15, '2024-03-01', '2025-03-01'),
+(16, 16, 16, '2024-04-01', '2025-04-01'),
+(17, 17, 17, '2024-05-01', '2025-05-01'),
+(18, 18, 18, '2024-06-01', '2025-06-01'),
+(19, 19, 19, '2024-07-01', '2025-07-01'),
+(20, 20, 20, '2024-08-01', '2025-08-01');
+
+-- Prescribe
+INSERT INTO Prescribe (Doctor_ID, Customer_ID, Medicine_ID, Date)
+VALUES
+(1, 1, 1, '2024-01-01'),
+(2, 2, 2, '2024-01-02'),
+(3, 3, 3, '2024-01-03'),
+(4, 4, 4, '2024-01-04'),
+(5, 5, 5, '2024-01-05'),
+(6, 6, 6, '2024-01-06'),
+(7, 7, 7, '2024-01-07'),
+(8, 8, 8, '2024-01-08'),
+(9, 9, 9, '2024-01-09'),
+(10, 10, 10, '2024-01-10'),
+(11, 11, 11, '2024-01-11'),
+(12, 12, 12, '2024-01-12'),
+(13, 13, 13, '2024-01-13'),
+(14, 14, 14, '2024-01-14'),
+(15, 15, 15, '2024-01-15'),
+(16, 16, 16, '2024-01-16'),
+(17, 17, 17, '2024-01-17'),
+(18, 18, 18, '2024-01-18'),
+(19, 19, 19, '2024-01-19'),
+(20, 20, 20, '2024-01-20');
